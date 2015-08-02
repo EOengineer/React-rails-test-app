@@ -1,0 +1,5 @@
+<h1>Blog Entry <%= @blog.id %></h1>
+<%= react_component('blog', {title: @blog.title, body: @blog.body}) %>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>

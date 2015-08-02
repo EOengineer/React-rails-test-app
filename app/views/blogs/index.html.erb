@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+
+
+  <div class="blogs-container">
+    <h1>Listing Blogs</h1>
+    <% @blogs.each do |blog| %>
+      <div class="blogs">
+        <%= react_component('blogs', {title: blog.title, body: blog.body}) %>
+      </div>
+    <% end %>
+  </div>
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>
